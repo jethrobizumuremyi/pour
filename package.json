@@ -1,7 +1,7 @@
 {
   "name": "pour",
   "version": "0.1.0",
-  "homepage": "https://jethrobizumuremyi.github.io/pour",
+  "homepage": "https://jethrobizumuremyi.github.io/pour/",
   "private": false,
   "dependencies": {
     "@emotion/react": "^11.10.5",
