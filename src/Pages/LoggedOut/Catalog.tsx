@@ -1,6 +1,7 @@
-import { Box, Button, Card, CardActionArea, CardContent, CardMedia, Grid, Link, Typography } from "@mui/material";
+import { Box, Button, Card, CardActionArea, CardContent, CardMedia, Grid, Typography } from "@mui/material";
 import React, {useState} from "react";
 import {Navigate} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 const Catalog = () => {
@@ -36,14 +37,35 @@ const Catalog = () => {
 
             <div className="container">
                 <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+
+                    <div>
+
+                        <Box>
+                            <Button
+                                style={{
+                                    
+                                    margin: '0 auto',
+                                    padding: 5
+                                }}
+                                size="small"
+                                variant="contained"
+                                color="secondary"
+                                href = "#"
+                                >
+                                Contrast Calculator
+                            </Button>
+                        </Box>
+                    </div>
+                    
                     <a href="/" className="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
                         <svg className="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlinkHref="#bootstrap"/></svg>
                     </a>
 
+                    
+                    
                     <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
                         <li><a href="/pour" className="nav-link px-2 link-secondary">Home</a></li>
-                        <li><a href="#" className="nav-link px-2 link-dark">Catalog</a></li>
-                        <li><a href="#" className="nav-link px-2 link-dark">Contrast Calculator</a></li>
+                        <li><Link to={'/catalog'} className="nav-link px-2 link-dark">Catalog</Link></li>
                         <li><a href="#" className="nav-link px-2 link-dark">About</a></li>
                     </ul>
 
