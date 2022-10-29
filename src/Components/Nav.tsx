@@ -15,7 +15,7 @@ class Nav extends Component {
                 
                 <ul className="navbar-nav px-3">
                     <li className="nav-item text-nowrap">
-                        <a className="nav-link px-3" href="/">Sign out</a>
+                        <a className="nav-link px-3" href="/pour">Sign out</a>
                     </li>
                 </ul>
             </header>

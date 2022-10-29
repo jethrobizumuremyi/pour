@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import Wrapper from "../Components/Wrapper";
 
-class Stats extends Component {
+class Dashboard extends Component {
     render() {
         return (
             <Wrapper>
@@ -27,4 +27,4 @@ class Stats extends Component {
     }
 }
 
-export default Stats;
+export default Dashboard;
