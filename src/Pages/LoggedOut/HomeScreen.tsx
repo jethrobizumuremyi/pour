@@ -144,7 +144,7 @@ const HomeScreen = () => {
                                 <CardContent>
                                 
                                 <Typography variant="body2" color="text.secondary">
-                                    Something about how website need to be more, yeah i forgot what r stands for too
+                                    Something about how website need to be more robust
                                 </Typography>
                                 </CardContent>
                             </CardActionArea>
