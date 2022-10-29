@@ -1,5 +1,6 @@
 import { Box, Button, Card, CardActionArea, CardContent, CardMedia, Grid, Typography } from "@mui/material";
 import React, {useState} from "react";
+import { Link } from "react-router-dom";
 import {Navigate} from "react-router-dom";
 
 
@@ -42,7 +43,7 @@ const HomeScreen = () => {
 
                     <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
                         <li><a href="/pour" className="nav-link px-2 link-secondary">Home</a></li>
-                        <li><a href="/pour/catalog" className="nav-link px-2 link-dark">Catalog</a></li>
+                        <li><Link to={'/catalog'} className="nav-link px-2 link-dark">Catalog</Link></li>
                         <li><a href="#" className="nav-link px-2 link-dark">Contrast Calculator</a></li>
                         <li><a href="#" className="nav-link px-2 link-dark">About</a></li>
                     </ul>

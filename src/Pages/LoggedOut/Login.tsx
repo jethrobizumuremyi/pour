@@ -3,7 +3,8 @@ import { Avatar, Box, Button, Card, CardActionArea, CardContent, CardMedia, Chec
 import React, {useState} from "react";
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import {Navigate} from "react-router-dom";
-import Link from '@mui/material/Link';
+import { Link } from "react-router-dom";
+
 
 
 const Login = () => {
@@ -56,7 +57,7 @@ const Login = () => {
 
                     <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
                         <li><a href="/pour" className="nav-link px-2 link-secondary">Home</a></li>
-                        <li><a href="/pour/catalog" className="nav-link px-2 link-dark">Catalog</a></li>
+                        <li><Link to={'/catalog'} className="nav-link px-2 link-dark">Catalog</Link></li>
                         <li><a href="#" className="nav-link px-2 link-dark">Contrast Calculator</a></li>
                         <li><a href="#" className="nav-link px-2 link-dark">About</a></li>
                     </ul>
@@ -146,12 +147,12 @@ const Login = () => {
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link href="#" variant="body2">
+                <Link to={'#'} >
                   Forgot password?
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="/pour/register" variant="body2">
+                <Link to={'/register'} >
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>
