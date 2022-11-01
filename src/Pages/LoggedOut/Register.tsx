@@ -1,16 +1,15 @@
-import { Copyright } from "@mui/icons-material";
-import { Avatar, Box, Button, Card, CardActionArea, CardContent, CardMedia, Checkbox, Container, CssBaseline, FormControlLabel, Grid, TextField, Typography } from "@mui/material";
+import { Avatar, Box, Button, Checkbox, Container, CssBaseline, FormControlLabel, Grid, TextField, Typography } from "@mui/material";
 import React, {useState} from "react";
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import {Navigate} from "react-router-dom";
 import { Link } from "react-router-dom";
+import Header from "../../Components/Header";
 
 
 
 const Register = () => {
-    const [redirect, setRedirect] = useState(false);
-    const [regredirect, setRegRedirect] = useState(false);
 
+    const [regredirect, setRegRedirect] = useState(false);
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
@@ -20,12 +19,6 @@ const Register = () => {
         });
       };
 
-    async function login() {
-       
-        setRedirect(true);
-
-
-    }
 
     async function register() {
        
@@ -34,12 +27,10 @@ const Register = () => {
 
     }
 
-    if (redirect) {
-        return <Navigate to = {'/login'}/>;
-    }
+    
 
     if (regredirect) {
-        return <Navigate to = {'/register'}/>;
+        return <Navigate to = {'/dashboard'}/>;
     }
 
 
@@ -50,70 +41,8 @@ const Register = () => {
             
 
             <div className="container">
-                <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-
-                    <div>
-
-                        <Box>
-                            <Button
-                                style={{
-                                    
-                                    margin: '0 auto',
-                                    padding: 5
-                                }}
-                                size="small"
-                                variant="contained"
-                                color="secondary"
-                                href = "#"
-                                >
-                                Contrast Calculator
-                            </Button>
-                        </Box>
-                    </div>
-                    
-                    <a href="/" className="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-                        <svg className="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlinkHref="#bootstrap"/></svg>
-                    </a>
-
-                    
-                    
-                    <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                        <li><a href="/pour" className="nav-link px-2 link-secondary">Home</a></li>
-                        <li><Link to={'/catalog'} className="nav-link px-2 link-dark">Catalog</Link></li>
-                        <li><a href="#" className="nav-link px-2 link-dark">About</a></li>
-                    </ul>
-
-                    <div className="col-md-3 text-end">
-
-                        <Box justifyContent={'space-between'}>
-                            <Button
-                                style={{
-                                    
-                                    margin: 5,
-                                    padding: 5
-                                }}
-                                size="small"
-                                variant="outlined"
-                                color="secondary"
-                                onClick={() => login()}>
-                                Sign in
-                            </Button>
-                            
-                            <Button
-                                style={{
-                                    
-                                    margin: '0 auto',
-                                    padding: 5
-                                }}
-                                size="small"
-                                variant="contained"
-                                color="primary"
-                                onClick={() => register()}>
-                                Sign Up
-                            </Button>
-                        </Box>
-                    </div>
-                </header>
+                
+                <Header/>
 
                 <main>
                     <Container component="main" maxWidth="xs">
@@ -188,6 +117,7 @@ const Register = () => {
                             fullWidth
                             variant="contained"
                             sx={{ mt: 3, mb: 2 }}
+                            onClick={() => register()}
                             
                           >
                             Sign Up
@@ -201,7 +131,6 @@ const Register = () => {
                           </Grid>
                         </Box>
                       </Box>
-                      <Copyright sx={{ mt: 5 }} />
                     </Container>
                 </main>
                 
