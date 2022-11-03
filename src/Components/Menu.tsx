@@ -7,7 +7,7 @@ const Menu = () => {
                 <div className="position-sticky pt-3 sidebar-sticky">
                     <ul className="nav flex-column">
                         <li className="nav-item">
-                            <Link to={'/dashboard'}className="nav-link active" aria-current="page">
+                            <Link to={'/dashboard'} className="nav-link active" aria-current="page">
                                 <span data-feather="home" className="align-text-bottom"></span>
                                 Dashboard
                             </Link>

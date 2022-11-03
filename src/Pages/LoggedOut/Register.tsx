@@ -1,4 +1,4 @@
-import { Avatar, Box, Button, Checkbox, Container, CssBaseline, FormControlLabel, Grid, TextField, Typography } from "@mui/material";
+import { Avatar, Box, Button, Checkbox, Container, FormControlLabel, Grid, TextField, Typography } from "@mui/material";
 import React, {useState} from "react";
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import {Navigate} from "react-router-dom";
@@ -46,7 +46,7 @@ const Register = () => {
 
                 <main>
                     <Container component="main" maxWidth="xs">
-                      <CssBaseline />
+                     
                       <Box
                         sx={{
                           marginTop: 8,
