@@ -8,7 +8,6 @@ import Login from "./Pages/LoggedOut/Login";
 import Catalog from "./Pages/LoggedOut/Catalog";
 import About from "./Pages/LoggedOut/About";
 
-
 function App() {
     return (
         <div className="App">
@@ -19,6 +18,7 @@ function App() {
                 <Route path="login/" element ={<Login />} />
                 <Route path="catalog/" element ={<Catalog />} />
                 <Route path="about/" element ={<About />} />
+
                 <Route path="/" element ={<HomeScreen />} />
             </Routes>
             

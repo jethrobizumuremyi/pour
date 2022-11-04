@@ -72,48 +72,49 @@ function SimpleDialog(props: SimpleDialogProps) {
             </div>
         </div>
         <div id="sample">
-            <div contentEditable id="sample-text" >
+            <div contentEditable id="sample-text" suppressContentEditableWarning={true}>
             Click to change demo text
             </div>
         </div>
+
         <div id="bars">
             <div>
-            <h2>Foreground</h2>
-            <div>
-                <label htmlFor="color-1-r" className="red">R</label> 
-                <input id="color-1-r" type="range" min="0" max="255" defaultValue= "0" onChange={e => changeR1(e.target.value)}/>
-                <input id="number-1-r" type="number" min="0" max="255" defaultValue= "0" value={r1} />
-            </div>
-            <div>
-                <label htmlFor="color-1-g" className="green">G</label> 
-                <input id="color-1-g" type="range" min="0" max="255" defaultValue= "0" onChange={e => changeG1(e.target.value)} />
-                <input id="number-1-g" type="number" min="0" max="255" defaultValue= "0" value={g1} />
-            </div>
-            <div>
-                <label htmlFor="color-1-b" className="blue">B</label> 
-                <input id="color-1-b" type="range" min="0" max="255" defaultValue= "0" onChange={e => changeB1(e.target.value)} />
-                <input id="number-1-b" type="number" min="0" max="255" defaultValue= "0" value={b1} />
-            </div>
-            <input id="color-1-hex" data-target="1" type="text" defaultValue="#000000" value={hex1}/>
-            </div>
-            <div>
-            <h2>Background</h2>
-            <div>
-                <label htmlFor="color-2-r" className="red">R</label> 
-                <input id="color-2-r" type="range" min="0" max="255" defaultValue= "255" onChange={e => changeR2(e.target.value)} />
-                <input id="number-2-r" type="number" min="0" max="255" defaultValue= "255" value={r2} />
-            </div>
-            <div>
-                <label htmlFor="color-2-g" className="green">G</label> 
-                <input id="color-2-g" type="range" min="0" max="255" defaultValue= "255" onChange={e => changeG2(e.target.value)} />
-                <input id="number-2-g" type="number"min="0" max="255" defaultValue= "255" value={g2} />
-            </div>
-            <div>
-                <label htmlFor="color-2-b" className="blue">B</label> 
-                <input id="color-2-b" type="range" min="0" max="255" defaultValue= "255" onChange={e => changeB2(e.target.value)} />
-                <input id="number-2-b" type="number" min="0" max="255" defaultValue= "255" value={b2} />
-            </div>
-            <input id="color-2-hex" data-target="2" type="text" defaultValue="#FFFFFF" value={hex2}/>
+                <h2>Foreground</h2>
+                <div>
+                    <label htmlFor="color-1-r" className="red">R</label> 
+                    <input id="color-1-r" type="range" min="0" max="255" defaultValue= "0" onChange={e => changeR1(e.target.value)}/>
+                    <input id="number-1-r" type="number" min="0" max="255" value={r1} readOnly/>
+                </div>
+                <div>
+                    <label htmlFor="color-1-g" className="green">G</label> 
+                    <input id="color-1-g" type="range" min="0" max="255" defaultValue= "0" onChange={e => changeG1(e.target.value)} />
+                    <input id="number-1-g" type="number" min="0" max="255" value={g1} readOnly/>
+                </div>
+                <div>
+                    <label htmlFor="color-1-b" className="blue">B</label> 
+                    <input id="color-1-b" type="range" min="0" max="255" defaultValue= "0" onChange={e => changeB1(e.target.value)} />
+                    <input id="number-1-b" type="number" min="0" max="255" value={b1} readOnly/>
+                </div>
+                <input id="color-1-hex" data-target="1" type="text" value={hex1} readOnly/>
+                </div>
+                <div>
+                <h2>Background</h2>
+                <div>
+                    <label htmlFor="color-2-r" className="red">R</label> 
+                    <input id="color-2-r" type="range" min="0" max="255" defaultValue= "255" onChange={e => changeR2(e.target.value)} />
+                    <input id="number-2-r" type="number" min="0" max="255" value={r2} readOnly/>
+                </div>
+                <div>
+                    <label htmlFor="color-2-g" className="green">G</label> 
+                    <input id="color-2-g" type="range" min="0" max="255" defaultValue= "255" onChange={e => changeG2(e.target.value)} />
+                    <input id="number-2-g" type="number"min="0" max="255" value={g2} readOnly/>
+                </div>
+                <div>
+                    <label htmlFor="color-2-b" className="blue">B</label> 
+                    <input id="color-2-b" type="range" min="0" max="255" defaultValue= "255" onChange={e => changeB2(e.target.value)} />
+                    <input id="number-2-b" type="number" min="0" max="255" value={b2} readOnly/>
+                </div>
+                <input id="color-2-hex" data-target="2" type="text" value={hex2} readOnly/>
             </div>
         </div>
 
